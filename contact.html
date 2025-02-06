@@ -349,13 +349,17 @@
          const messageContent = form.conMessage;
    
          // Reset previous error states
-         [firstName, email, phone, service, messageContent].forEach(input => input.style.border = '');
+         [firstName, lastName, email, phone, service, messageContent].forEach(input => input.style.border = '');
    
          let isValid = true;
          
          // Validate required fields
          if (!firstName.value.trim()) {
             firstName.style.border = '1px solid red';
+            isValid = false;
+         }
+         if (!lastName.value.trim()) {
+            lastName.style.border = '1px solid red';
             isValid = false;
          }
          if (!email.value.trim()) {
@@ -433,10 +437,6 @@
       });
    </script>
    
-   
-   
-
-
 </body>
 
 </html>
