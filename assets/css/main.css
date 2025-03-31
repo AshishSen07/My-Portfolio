@@ -3845,8 +3845,8 @@ a {
     cursor: url('/assets/img/custome-cursor/Color\ Palette\ 3D--pointer--SweezyCursors.png'), auto;
 }
 .audio-button {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 	border-radius: 50%;
 	background: transparent;
 	border: 2px solid rgba(128, 0, 255, 0.5);
@@ -3854,8 +3854,8 @@ a {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-    left: 50px;
-    bottom: 50px;
+    right: 50px;
+    bottom: 120px;
 	cursor: pointer;
 	z-index: 99;
 	box-shadow: inset 0 0 0 2px rgba(135, 80, 247, 0.5);
@@ -3902,6 +3902,7 @@ a {
 
 @media only screen and (max-width: 767px)  {
 	.audio-button{
-		bottom:15px
+		bottom:80px;
+		right: 15px;
 	}
 }
