@@ -3845,16 +3845,16 @@ a {
     cursor: url('/assets/img/custome-cursor/Color\ Palette\ 3D--pointer--SweezyCursors.png'), auto;
 }
 .audio-button {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
 	border-radius: 50%;
 	background: transparent;
-	border: 4px solid rgba(128, 0, 255, 0.5);
+	border: 2px solid rgba(128, 0, 255, 0.5);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-    left: 40px;
+    left: 50px;
     bottom: 50px;
 	cursor: pointer;
 	z-index: 99;
@@ -3868,15 +3868,12 @@ a {
 
 @keyframes pulse {
 	0% {
-		transform: translateX(-50%) scale(1);
 		box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
 	}
 	50% {
-		transform: translateX(-50%) scale(1.1);
 		box-shadow: 0 0 20px rgba(128, 0, 255, 0.8);
 	}
 	100% {
-		transform: translateX(-50%) scale(1);
 		box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
 	}
 }
