@@ -1301,3 +1301,20 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 	});
 })(jQuery);
+
+
+const audio = document.getElementById("background-audio");
+const playButton = document.getElementById("play-audio");
+const playIcon = document.getElementById("play-icon");
+
+playButton.addEventListener("click", function () {
+   if (audio.paused) {
+	  audio.play();
+	  playIcon.classList.replace("fa-play", "fa-pause");
+	  playButton.classList.add("playing");
+   } else {
+	  audio.pause();
+	  playIcon.classList.replace("fa-pause", "fa-play");
+	  playButton.classList.remove("playing");
+   }
+});

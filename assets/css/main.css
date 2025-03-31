@@ -3844,3 +3844,61 @@ body {
 a {
     cursor: url('/assets/img/custome-cursor/Color\ Palette\ 3D--pointer--SweezyCursors.png'), auto;
 }
+.audio-button {
+    height: 70px;
+    width: 70px;
+	border-radius: 50%;
+	background: transparent;
+	border: 4px solid rgba(128, 0, 255, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+    left: 40px;
+    bottom: 50px;
+	cursor: pointer;
+	z-index: 99;
+	box-shadow: inset 0 0 0 2px rgba(135, 80, 247, 0.5);
+	transition: transform 0.3s ease-in-out;
+}
+
+.audio-button.playing {
+	animation: pulse 1.5s infinite ease-in-out; /* Pulse animation when playing */
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateX(-50%) scale(1);
+		box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
+	}
+	50% {
+		transform: translateX(-50%) scale(1.1);
+		box-shadow: 0 0 20px rgba(128, 0, 255, 0.8);
+	}
+	100% {
+		transform: translateX(-50%) scale(1);
+		box-shadow: 0 0 10px rgba(128, 0, 255, 0.5);
+	}
+}
+
+.audio-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 4px solid #8000ff;
+	clip-path: inset(0 0 0 100%);
+	transition: clip-path 1s linear;
+}
+
+.audio-button.playing::before {
+	clip-path: inset(0 0 0 0);
+}
+
+.audio-button i {
+	font-size: 24px;
+	color: #8000ff;
+}
