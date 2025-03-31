@@ -3835,3 +3835,12 @@ body.absolute_header .breadcrumb_area {
 }
 
 /* END: Modal CSS */
+
+
+body {
+    cursor: url('/assets/img/custome-cursor/Color\ Palette\ 3D--cursor--SweezyCursors.png'), auto;
+}
+
+a {
+    cursor: url('/assets/img/custome-cursor/Color\ Palette\ 3D--pointer--SweezyCursors.png'), auto;
+}
