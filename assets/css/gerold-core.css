@@ -7354,7 +7354,7 @@ START: Theme Footer CSS
   position: relative;
   z-index: 1;
 }
-.tj-footer-6-paragraph::before {
+.tj-footer-6- before {
   content: "";
   position: absolute;
   width: 7px;
@@ -7366,6 +7366,7 @@ START: Theme Footer CSS
           transform: translateY(-50%);
   background: #00FF2F;
   border-radius: 50%;
+
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tj-footer-6-menu {

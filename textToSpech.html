@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <style>
+    *{
+        color: white;
+    }
+    .submit-btn{
+        background: transparent !important;
+        border: none;
+    }
+    .morph-card{
+        background: rgba(0, 0, 0, 0.32);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+            }
+            .video-background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+            }
+
+        .search-container {
+            margin-top:5% ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #161616;
+            border-radius: 5px;
+            padding:20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-image-slice: 1;
+        }
+
+        .search-icon {
+            color: #fff;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .send-icon {
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .details-container{
+            padding: 20px ;
+            background: rgba(0, 0, 0, 0.32);
+            border-radius: 16px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .temp-title{
+            font-size: 7rem;
+        }
+        #searched-city{
+            margin: 50px 0;
+            font-size: 6rem;
+        }
+  </style>
+  <body>
+    <main>
+        <video class="video-background" src="assets/video/28236-368501609.mp4" autoplay loop muted></video>
+
+      <!-- search bar and city name -->
+      <section class="container">
+        <div class="row">
+          <form class="col search-container" id="search-form">
+            <span class="search-icon">
+                <img src="assets/img/icons/search.png" width="50%" alt="">
+            </span>
+            <input
+              type="text"
+              id="search-input"
+              aria-describedby="searchCity"
+              placeholder="Search city..."
+              class="search-input"
+              autocomplete="off"
+              oninput="showSuggestions(this.value)"
+            />
+            <div id="suggestions" class="suggestions"></div>
+            <button class="submit-btn" type="submit">Search</button>
+          </form>
+        </div>
+        <span class="measurements">
+          <a href="#" id="celcius-link">C°</a> |
+          <a href="#" id="fahrenheit-link">F°</a>
+        </span>
+      </section>
+
+      <!-- temp and day info -->
+      <section class="current-weather">
+        <div class="container">
+            <h1
+            class="col d-flex justify-content-center align-items-center city-title"
+            id="searched-city"
+          >
+           City
+          </h1>
+          <div class="row details-container">
+            <h1 class="col temp-title" id="current-temperature">00°</h1>
+            <div class="col todays-info">
+              <p id="current-time">11:00</p>
+              <h2 id="current-day">Today</h2>
+              <p id="weather-type">Cloudy</p>
+            </div>
+            <div class="col d-flex align-items-center side-info">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>
+                 <span id="wind">
+                    <span>
+                        <img src="assets/img/icons/hot.png" width="15%" alt="">
+                    </span></li>
+                <li>Wind:
+                </span>
+                <span>
+                    <img src="assets/img/icons/wind.png" width="15%" alt="">
+                </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
