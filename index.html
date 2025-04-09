@@ -329,7 +329,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
       </section>
       <!-- end: Maquee Area -->
 
-      
+      <div class="portfolio-img"> 
+        <img  src="assets/img/portfolio/Horizontal Portfolio.png" alt="">
+      </div>
       <!-- start: About Area -->
       <section class="tj-about-section style-6" id="scroll-hero">
         <div class="container">
@@ -415,7 +417,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
         </div>
       </section>
       <!-- end: About Area -->
-
       <!-- start: Portfolio Area -->
       <section class="tj-portfolio-section style-6">
         <div class="section-header style-4">
@@ -1318,7 +1319,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
             </div>
         </section>
         <!-- end: Resume Area -->
-
       <!-- start: Cta Area -->
       <section class="tj-cta-section tj-cta-6-section">
         <div class="container">
@@ -1451,6 +1451,24 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+
+<script>
+gsap.to(".portfolio-img img", {
+  x: "-280vw",
+  ease: "none", // or try "power1.inOut" for a natural ease
+  scrollTrigger: {
+    trigger: ".portfolio-img img",
+    scrub: 0.5, // smooth scrubbing
+    pin: true,
+    start: "top 30%",
+    end: "bottom -30%"
+  }
+});
+
+
+
+</script>
+
   </body>
 </html>
 

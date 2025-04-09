@@ -3906,3 +3906,12 @@ a {
 		right: 15px;
 	}
 }
+.portfolio-img{
+	width: max-content !important;
+	margin: 5vh;
+	position: sticky;
+	top: 20vh;
+}
+.portfolio-img img{
+	height: 50vh;
+}
