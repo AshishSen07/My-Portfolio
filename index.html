@@ -1455,17 +1455,23 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
 <script>
 gsap.to(".portfolio-img img", {
   x: "-100%",
-  ease: "none", // or try "power1.inOut" for a natural ease
+  ease: "none",
   scrollTrigger: {
     trigger: ".portfolio-img img",
-    scrub: 0.5, // smooth scrubbing
+    scrub: 0.5,
     pin: true,
     start: "top 30%",
-    end: "bottom -30%"
+    end: "bottom -500%"
   }
+}); 
+
+gsap.from(".header-6 div", {
+  y: -50,
+  duration:0.5,
+  opacity: 0,
+  ease: "none",
+  stagger: 0.7,
 });
-
-
 
 </script>
 
