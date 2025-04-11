@@ -11,12 +11,12 @@
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
     <link
       rel="shortcut icon"
       type="image/png"
       href="./assets/img/faviocn.png"
     />
-
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -52,7 +52,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
     </style>
   <body>
     <!-- Preloader Area Start -->
-    <div class="preloader">
+    <div class="preloader ">
       <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <path
           id="preloaderSvg"
@@ -72,7 +72,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
       </div>
     </div>
     <!-- Preloader Area End -->
-
     <!-- start: Back To Top -->
     <div class="progress-wrap" id="scrollUp">
       <svg
@@ -424,15 +423,15 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
         </div>
         <div class="portfolio-6-wrapper">
           <div class="portfolio-6-content-area">
-            <div class="portfolio-wrapper-6 an-pine-vanish">
+            <div class="portfolio-wrapper-6 an-pine-vanish card1">
               <div class="portfolio-item style-6">
                 <div class="portfolio-images">
-                  <img src="assets/img/portfolio/findtrend ui.png" alt="Images" />
+                  <img  src="assets/img/portfolio/findtrend ui.png" alt="Images" />
 
                 </div>
               </div>
             </div>
-            <div class="portfolio-wrapper-6 an-pine-vanish">
+            <div class="portfolio-wrapper-6 an-pine-vanish card2">
               <div class="portfolio-item style-6">
                 <div class="portfolio-images">
                   <img src="assets/img/portfolio/your bank.png" alt="Images" />
@@ -440,7 +439,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
                 </div>
               </div>
             </div>
-            <div class="portfolio-wrapper-6 an-pine-vanish">
+            <div class="portfolio-wrapper-6 an-pine-vanish card3">
               <div class="portfolio-item style-6">
                 <div class="portfolio-images">
                   <img
@@ -1451,8 +1450,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
-
+    <script src="https://unpkg.com/split-type"></script>
 <script>
+
 gsap.to(".portfolio-img img", {
   x: "-100%",
   ease: "none",
@@ -1473,6 +1473,50 @@ gsap.from(".header-6 div", {
   stagger: 0.7,
 });
 
+gsap.to('.card2', {
+	scale: 0.7,
+	opacity: 0,
+	scrollTrigger: {
+	  trigger: ".card2",
+	  start: "top 25%",
+	  end: "bottom 25%",
+	  scrub: true,
+	}
+  });
+  gsap.to('.card1', {
+	scale: 0.7,
+	opacity: 0,
+	scrollTrigger: {
+	  trigger: ".card1",
+	  start: "top 25%",
+	  end: "bottom 25%",
+	  scrub: true,
+	}
+  });
+  gsap.to('.card3', {
+	scale: 0.7,
+	opacity: 0,
+	scrollTrigger: {
+	  trigger: ".card3",
+	  start: "top 25%",
+	  end: "bottom 25%",
+	  scrub: true,
+	}
+  });
+
+  gsap.from(".section-header .title", {
+  x: 500,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".section-header",
+    start: "top 100%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  }
+});
+
+    
 </script>
 
   </body>

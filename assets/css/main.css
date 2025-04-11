@@ -35,7 +35,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
 *  START: Theme Default CSS
 * ===============================
 */
-
+@import "https://unpkg.com/transition-style";
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Sora:wght@100..800&display=swap");
 
 :root {
@@ -3915,3 +3915,4 @@ a {
 .portfolio-img img{
 	height: 50vh;
 }
+
