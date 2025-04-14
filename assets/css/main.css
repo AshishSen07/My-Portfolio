@@ -2210,7 +2210,7 @@ body.loaded {
 	row-gap: 30px;
 }
 .skills-widget .skill-item {
-	max-width: 180px;
+	max-width: 160px;
 	width: 100%;
 	text-align: center;
 }
