@@ -6442,7 +6442,7 @@ START: Theme About CSS
   position: relative;
   z-index: 1;
 }
-.about-6-images .ab_images::before {
+/* .about-6-images .ab_images::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -6450,7 +6450,7 @@ START: Theme About CSS
   background: -webkit-gradient(linear, left top, right top, from(var(--tj-theme-primary)), to(var(--tj-white)));
   background: linear-gradient(to right, var(--tj-theme-primary) 0%, var(--tj-white) 100%);
   border-radius: 16px;
-}
+} */
 .about-6-images img {
   position: relative;
   width: 100%;
