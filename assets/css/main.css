@@ -3934,3 +3934,7 @@ a {
 	  display: none !important;
 	}
   }
+.modal-viewer{
+	height: 80vh;
+	width: 100%;
+  }

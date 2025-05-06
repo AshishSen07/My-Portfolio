@@ -37,6 +37,7 @@
   <link href="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
 " rel="stylesheet" />
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <style>
   .btnImage {
@@ -309,9 +310,34 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css
           <div class="col-12">
             <div class="about-wrapper-sytle-6">
               <div class="about-6-images">
-                <div class="ab_images wow zoomIn">
-                  <img src="assets/img/about/h6-about.jpeg" alt="Images" />
-                </div>
+                <div class="ab_images wow zoomIn">                
+                <!-- <img src="assets/img/about/h6-about.jpeg" alt=""> -->
+                <model-viewer 
+                class="modal-viewer" 
+                src="assets/img/about/pc_gamer_animation.glb" 
+                alt="A 3D model of an astronaut" 
+                ar 
+                ar-modes="scene-viewer quick-look" 
+                camera-controls 
+                shadow-intensity="3.8" 
+                exposure="2.5" 
+                loading="lazy" 
+                auto-rotate 
+                interpolation-decay="100" 
+                min-camera-orbit="auto 85deg auto" 
+                max-camera-orbit="auto 90deg auto" 
+                disable-pan 
+                oncontextmenu="return false;" 
+                tone-mapping="neutral" 
+                camera-orbit="-140.9deg 88.63deg 168" 
+                camera-target="0 -16.87" 
+                disable-zoom 
+                animation-name="idle" 
+                autoplay>
+              </model-viewer>
+              
+              
+                              </div>
                 <div class="about-shapes tj-counter-5-shape-1">
                   <svg width="104" height="100" viewBox="0 0 104 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
