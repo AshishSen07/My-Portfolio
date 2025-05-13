@@ -1,0 +1,3 @@
+User-agent: *
+Allow: https://designbyashish.netlify.app/
+Sitemap: https://designbyashish.netlify.app/sitemap.xml
