@@ -3938,3 +3938,8 @@ a {
 	height: 80vh;
 	width: 100%;
   }
+
+  .card-animated-img{
+	border-radius: 100%;
+	padding: 2px;
+  }

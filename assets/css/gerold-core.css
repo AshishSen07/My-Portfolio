@@ -7556,6 +7556,7 @@ START: Theme Service CSS
 .tj-service-6-icon {
   width: 64px;
   height: 64px;
+  border-radius: 100%;
   line-height: 1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
